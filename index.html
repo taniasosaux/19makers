@@ -32,7 +32,19 @@
           <a href="descarga.html">Descargables</a>
         </li>
         <li>
-          <a class="btn-floating btn-small waves-effect waves-light black"><i class="material-icons">person</i></a>
+          <a class="btn modal-trigger btn-floating btn-small waves-effect waves-light black"><i
+              class="material-icons">person</i></a>
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Modal Header</h4>
+              <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+          </div>
+
         </li>
       </ul>
     </nav>
@@ -49,32 +61,59 @@
       </div>
     </div>
   </div>
-  <footer class="page-footer">
-    <div class="footer-copyright">
-      <div class="container">
-        © 2020 Copyright
-        <a class="grey-text text-lighten-4 right" href="#!">Aviso de privacidad</a>
+  <footer class="footer z-depth-5">
+    <div class="container">
+      <div class="social">
+        <a href="https://www.facebook.com/PlataformaMexicoCovid" class="social-link facebook"></a>
+        <a href="https://twitter.com/MexicoCovid191" class="social-link twitter"></a>
+        <a href="https://www.instagram.com/p/B-V0_fPHHul" class="social-link Instagram"></a>
+        <a href="https://www.linkedin.com/company/plataformamexicocovid19/" class="social-link linkedIn"></a>
+      </div>
+      <div>
+        <p>
+          19MAKERS<Br />
+          <a href="tyc.html">Términos y Condiciones</a>
+          <a href="adp.html">Aviso de privacidad</a>
+        </p>
       </div>
     </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"> </script>
   <script>
-    var instance = M.Carousel.init({
-      fullWidth: true
-    });
+    const ipad = window.matchMedia("screen and (max-width: 767px)");
+    const menu = document.querySelector(".menu");
+    const burgerButton = document.querySelector("#burger-menu");
+    ipad.addListener(validation);
 
+    function validation(event) {
+      if (event.matches) {
+        burgerButton.addEventListener("click", hideShow);
+      } else {
+        burgerButton.removeEventListener("click", hideShow);
+      }
+    }
+    validation(ipad);
+
+    function hideShow() {
+      if (menu.classList.contains("is-active")) {
+        menu.classList.remove("is-active");
+      } else {
+        menu.classList.add("is-active");
+      }
+    }
+  </script>
+  <script data-account="5C16rj2qY2" src="https://cdn.userway.org/widget.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.carousel');
-      var instances = M.Carousel.init(elems, {
-        dist: 0,
-        padding: 0,
-        fullWidth: true,
-        indicators: true,
-        duration: 100,
-      });
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
     });
   </script>
-
 </body>
 
 </html>
+
+
+
+<!--<br />Diseñado con 💖 por
+            <a href="https://taniasosa.com">Tania Sosa</a>-->

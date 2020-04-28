@@ -48,12 +48,12 @@
     });
   </script>
 </body>
-<div class="container">
+<div class="container-text">
   <p><strong>AVISO DE PRIVACIDAD </strong></p>
-  <p><strong>PLATAFORMA MÉXICO VS COVID 19. </strong></p>
+  <p><strong>19 MAKERS</strong></p>
   <p>&nbsp;</p>
   <p>
-    Los administradores de la Plataforma México vs COVID-19, son los
+    Los administradores de 19MAKERS, son los
     responsables del tratamiento de los datos personales que se
     proporcionen, los cuales serán protegidos conforme a lo dispuesto por la
     Ley Federal de Protección de Datos Personales en Posesión de
@@ -63,8 +63,7 @@
     <strong>¿Qué datos personales se recaban y con qué finalidad?</strong>
   </p>
   <p>
-    Al proporcionar datos personales a través de la Plataforma México vs
-    COVID 19, se entenderá por consentimiento su uso exclusivamente para
+    Al proporcionar datos personales a través de 19MAKERS, se entenderá por consentimiento su uso exclusivamente para
     conocer la identidad de la persona física, dependiendo del rol que se
     elija dentro de la plataforma, mismo que podrá ser el de donador y/o
     solicitud de ingreso al programa de voluntarios, o requerimiento de
@@ -110,7 +109,7 @@
   </p>
   <p>
     Se podrán ejercer los derechos ARCO mediante el correo electrónico
-    slackmxcovid@gmail.com, o bien a través de cualquiera de las páginas de
+    de 19MAKERS, o bien a través de cualquiera de las páginas de
     difusión, siendo estas LinkedIn, Facebook e Instagram; donde se
     requerirá mencionar específicamente el derecho a ejercer en los datos
     proporcionados con anterioridad.
@@ -130,15 +129,49 @@
     mismo medio.
   </p>
   <p>&nbsp;</p>
-  <footer class="page-footer">
-    <div class="footer-copyright">
-      <div class="container">
-        © 2014 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-      </div>
+</div>
+<footer class="footer z-depth-5">
+  <div class="container">
+    <div class="social">
+      <a href="https://www.facebook.com/PlataformaMexicoCovid" class="social-link facebook"></a>
+      <a href="https://twitter.com/MexicoCovid191" class="social-link twitter"></a>
+      <a href="https://www.instagram.com/p/B-V0_fPHHul" class="social-link Instagram"></a>
+      <a href="https://www.linkedin.com/company/plataformamexicocovid19/" class="social-link linkedIn"></a>
     </div>
-  </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </body>
+    <div>
+      <p>
+        19MAKERS<Br />
+        <a href="tyc.html">Términos y Condiciones</a>
+        <a href="adp.html">Aviso de privacidad</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script>
+  const ipad = window.matchMedia("screen and (max-width: 767px)");
+  const menu = document.querySelector(".menu");
+  const burgerButton = document.querySelector("#burger-menu");
+  ipad.addListener(validation);
+
+  function validation(event) {
+    if (event.matches) {
+      burgerButton.addEventListener("click", hideShow);
+    } else {
+      burgerButton.removeEventListener("click", hideShow);
+    }
+  }
+  validation(ipad);
+
+  function hideShow() {
+    if (menu.classList.contains("is-active")) {
+      menu.classList.remove("is-active");
+    } else {
+      menu.classList.add("is-active");
+    }
+  }
+</script>
+<script data-account="5C16rj2qY2" src="https://cdn.userway.org/widget.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
 
 </html>

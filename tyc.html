@@ -48,14 +48,14 @@
     });
   </script>
 
-  <div class="container">
+  <div class="container-text">
     <p>
-      <strong>TÉRMINOS Y CONDICIONES DE PLATAFORMA MÉXICO VS COVID-19</strong>
+      <strong>TÉRMINOS Y CONDICIONES DE 19MAKERS</strong>
     </p>
     <p>&nbsp;</p>
     <p>
       El presente convenio describe los términos y condiciones aplicables para
-      el uso y acceso a la Plataforma México vs COVID-19, así como por medio
+      el uso y acceso a 19MAKERS, así como por medio
       de sus páginas de difusión como “Facebook”, “LinkedIn”, “Instagram” y
       “Twitter”.
       <br />
@@ -109,7 +109,7 @@
     <p><strong>Registro y Datos personales.</strong></p>
     <p>
       Los <strong>“USUARIOS”</strong> de la
-      <strong>Plataforma México COVID-19</strong>, deberán completar el
+      <strong>19MAKERS</strong>, deberán completar el
       formulario con su información personal de manera exacta, precisa y
       verdadera, por lo que manifiesta, bajo protesta de decir verdad que toda
       la información que ha proporcionado y/o proporcione, es verdadera,
@@ -122,7 +122,7 @@
       servicio posible, particularmente para mantener un registro de usuarios,
       de pedidos de ayuda, ofrecimiento de donaciones o solicitud de ingreso
       al programa de voluntarios.
-      <strong>Plataforma México COVID-19</strong> está altamente comprometida
+      <strong>19MAKERS</strong> está altamente comprometida
       con el cumplimiento del aviso de privacidad establecido en la
       plataforma, por lo que utilizamos sistemas avanzados y los actualizamos
       constantemente para asegurarnos que no existe ningún acceso no
@@ -165,18 +165,48 @@
     </p>
     <p>&nbsp;</p>
   </div>
-  <footer class="page-footer">
-    <div class="footer-copyright">
-      <div class="container">
-        © 2014 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+  <footer class="footer z-depth-5">
+    <div class="container">
+      <div class="social">
+        <a href="https://www.facebook.com/PlataformaMexicoCovid" class="social-link facebook"></a>
+        <a href="https://twitter.com/MexicoCovid191" class="social-link twitter"></a>
+        <a href="https://www.instagram.com/p/B-V0_fPHHul" class="social-link Instagram"></a>
+        <a href="https://www.linkedin.com/company/plataformamexicocovid19/" class="social-link linkedIn"></a>
+      </div>
+      <div>
+        <p>
+          19MAKERS<Br />
+          <a href="tyc.html">Términos y Condiciones</a>
+          <a href="adp.html">Aviso de privacidad</a>
+        </p>
       </div>
     </div>
   </footer>
+  <script>
+    const ipad = window.matchMedia("screen and (max-width: 767px)");
+    const menu = document.querySelector(".menu");
+    const burgerButton = document.querySelector("#burger-menu");
+    ipad.addListener(validation);
+
+    function validation(event) {
+      if (event.matches) {
+        burgerButton.addEventListener("click", hideShow);
+      } else {
+        burgerButton.removeEventListener("click", hideShow);
+      }
+    }
+    validation(ipad);
+
+    function hideShow() {
+      if (menu.classList.contains("is-active")) {
+        menu.classList.remove("is-active");
+      } else {
+        menu.classList.add("is-active");
+      }
+    }
+  </script>
+  <script data-account="5C16rj2qY2" src="https://cdn.userway.org/widget.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
-
-<!--<br />Diseñado con 💖 por
-            <a href="https://taniasosa.com">Tania Sosa</a>-->
